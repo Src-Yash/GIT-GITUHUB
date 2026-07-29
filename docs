@@ -152,3 +152,8 @@ How does Git know what branch you’re currently on? It keeps a special pointer 
 
 to switch the branch git run a command called
 git checkout (branch name)  head -> branch name 
+
+now if there is issue can up while working then your boss said to solve it so now what you will do is change your main working directory and then make a new branch let's call it hotfix then work on hot fix check if the issue is solved or not then merge the hotfix to your main branch on which the production code is present 
+
+git switch master
+git merge hotfix 

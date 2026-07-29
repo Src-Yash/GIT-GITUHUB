@@ -1,0 +1,143 @@
+
+- for first time git set up 
+
+git config --list --show-origin
+git config --global user.name "yash srivastava"
+git config --global user.email "abc@gmail.com"
+git config --global init.defaultBranch main
+
+-Initializing a Repository in an Existing Directory
+
+git init
+git add .
+git commit -m "comment"
+
+- for cloning 
+git clone <repo link>
+
+-for status
+git status
+
+-Tracking new file
+git add README
+git status -s (to show the status in short)
+
+-Ignoring Files
+.gitignore
+
+- you want to know exactly what you changed, not just which files were changed — you can use the git diff command
+git diff
+git diff --staged
+
+
+-to remove file from staged area(tracked files)
+rm filename (remove the file form)
+git rm filename(it chnages the staged file)
+
+
+-to move files from one place to other
+git mvv file from file2
+
+-This is particularly useful if you forgot to add something to your .gitignore file and accidentally staged it, like a large log file or a bunch of .a compiled files. To do this, use the --cached option:
+
+git rm --cached readme
+
+-viewing the commit history 
+git log
+
+-One of the more helpful options is -p or --patch, which shows the difference (the patch output) introduced in each commit. You can also limit the number of log entries displayed, such as using -2 to show only the last two entries.
+git log -p  -(last changes )
+
+-if you want to see some abbreviated stats for each commit, you can use the --stat option:
+git log --stat
+
+- the time-limiting options such as --since and --until are very useful. For example, this command gets the list of commits made in the last two weeks:
+git log --since=2.weeks
+
+-Undoing things
+
+git commit --amend
+
+- Unstaging a staged file
+
+git add *
+git reset HEAD contributing .md
+
+-  Alternative for reset or undoing things
+
+git restore --staged contributing.md
+
+- Unmodifiying a Modified file witg git restore
+
+git restore contributing.md
+
+- Working with remotes
+
+git remote -v
+
+-Fetching and Pulling from Your Remotes
+As you just saw, to get data from your remote projects, you can run:
+
+git fetch <remote>
+
+remote is set to origin when you clone the repo
+
+- git pull: Download the latest changes and automatically merge them into your current branch.
+
+git pull origin main --rebase
+
+--rebase → Replay your local commits on top of the updated main branch instead of merging.
+
+
+Inspecting a Remote
+If you want to see more information about a particular remote, you can use the git remote show <remote> command. If you run this command with a particular shortname, such as origin 
+git remote show origin
+
+- Renaming and Removing remotes
+
+git remote rename yash harsh
+
+- Tagging
+Listing Your Tags
+
+Listing the existing tags in Git is straightforward. Just type git tag (with optional -l or --list):
+
+$ git tag
+v1.0
+v2.0
+
+Creating Tags
+Git supports two types of tags: lightweight and annotated.
+lightweight  -  they are just for show or pointing a specific commit
+
+Annotated tags  - are stored as full objects in the Git database. They’re checksummed; contain the tagger name, email, and date; have a tagging message; 
+
+creating an annotated tag 
+git tag -a v1.4 -m "my version 1.4"
+git show v1.4
+
+listing your tag
+git tag
+
+sharing Tags
+By default, the git push command doesn’t transfer tags to remote servers. You will have to explicitly push tags to a shared server after you have created them. This process is just like sharing remote branches — you can run git push origin <tagname>.
+for pushing all tags at a same time
+
+git push origin --tags
+
+- Deleting tags
+
+git tag -d <name> (from your local space)
+
+Delete a remote tag (GitHub)
+
+If you've already pushed the tag to GitHub, deleting it locally is not enough.
+
+Delete the remote tag with:
+
+git push origin --delete v1.0
+
+Git Aliases
+
+A Git alias is a shortcut for a Git command. It allows you to type a shorter command instead of a long one.
+

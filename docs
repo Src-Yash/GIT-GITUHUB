@@ -157,3 +157,5 @@ now if there is issue can up while working then your boss said to solve it so no
 
 git switch master
 git merge hotfix 
+
+to delete a branch what we can do is simply use git branch -d (branch name)

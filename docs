@@ -168,3 +168,9 @@ git merge (issue name)
 after the merge there is no need of the brnch issue so we will delete it 
 git branch -d "branch name"
 
+- git merge conflicts
+
+A merge conflict happens when Git doesn't know which change to keep because two versions of the same code have been modified differently.
+
+Think of it like two people editing the same paragraph in a Word document.
+

@@ -182,3 +182,12 @@ git branch  -> list your current branch
 git branch  -v ->   used to list all your local branches along with the latest commit on each branch.
 git branch --merged ->  to see which branches are already merged into the branch you’re on, you can run 
 git branch --no-merged -> to see all the branches you haven't merged in 
+
+Changing a branch name
+
+first locally
+git branch --move (name you want to change) (the changed name)
+
+to provide the name to remotely to server
+
+git push --set-upstream origin (the changed name)

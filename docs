@@ -159,3 +159,12 @@ git switch master
 git merge hotfix 
 
 to delete a branch what we can do is simply use git branch -d (branch name)
+
+Basic Merging
+Suppose you’ve decided that your issue #53 work is complete and ready to be merged into your master branch. In order to do that, you’ll merge your iss53 branch into master, much like you merged your hotfix branch earlier. All you have to do is check out the branch you wish to merge into and then run the git merge command:
+
+git switch (main)
+git merge (issue name)
+after the merge there is no need of the brnch issue so we will delete it 
+git branch -d "branch name"
+

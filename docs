@@ -174,3 +174,11 @@ A merge conflict happens when Git doesn't know which change to keep because two 
 
 Think of it like two people editing the same paragraph in a Word document.
 
+if you want to use a graphical tool to resolve these issues, you can run git mergetool, which fires up an appropriate visual merge tool and walks you through the conflicts:
+
+- git branching - branch management
+
+git branch  -> list your current branch 
+git branch  -v ->   used to list all your local branches along with the latest commit on each branch.
+git branch --merged ->  to see which branches are already merged into the branch you’re on, you can run 
+git branch --no-merged -> to see all the branches you haven't merged in 

@@ -191,3 +191,15 @@ git branch --move (name you want to change) (the changed name)
 to provide the name to remotely to server
 
 git push --set-upstream origin (the changed name)
+
+now what  we can do is delete the branch that is not used now which is the (name you want to change)
+
+git  push origin --delete (name you want to change)
+
+Changing the master branch name 
+
+git branch --move master main
+
+git push --set-upstream origin main
+
+git push origin --delete master

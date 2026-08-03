@@ -203,3 +203,7 @@ git branch --move master main
 git push --set-upstream origin main
 
 git push origin --delete master
+
+What are Long-Running Branches?
+
+A long-running branch is simply a branch that exists for a long time.
